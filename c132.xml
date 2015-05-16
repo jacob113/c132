@@ -1,1 +1,51 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="sensor_button" id="83" x="-392" y="36">
+    <field name="OBJECT">UP</field>
+  </block>
+  <block type="procedures_defreturn" id="56" inline="false" x="239" y="54">
+    <mutation></mutation>
+    <field name="NAME">functionName</field>
+    <statement name="STACK">
+      <block type="movement_right" id="26">
+        <next>
+          <block type="comment_comment" id="6">
+            <field name="TEXT"></field>
+            <next>
+              <block type="comment_comment" id="4">
+                <field name="TEXT"></field>
+                <next>
+                  <block type="movement_forward" id="16">
+                    <next>
+                      <block type="multimedia_playwav" id="42">
+                        <field name="WAV"></field>
+                        <next>
+                          <block type="movement_reverse" id="52">
+                            <next>
+                              <block type="variables_set" id="85" inline="true">
+                                <field name="VAR">item</field>
+                                <value name="VALUE">
+                                  <block type="sensor_object" id="68">
+                                    <field name="OBJECT">LEFTFRONT</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block type="math_bitwise" id="93" inline="true">
+        <field name="OP">AND</field>
+      </block>
+    </value>
+  </block>
+</xml>
