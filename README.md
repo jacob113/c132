@@ -5,8 +5,9 @@ c132
 
 ### Project Information
 ```
-Type              : Scratch
-Version           : 1.0.0
+game              : grand money
+
+Version           : 5.3.5
 Author            : jacob113
 
 ### License
