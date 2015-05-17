@@ -1,30 +1,30 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="sensor_button" id="83" x="-392" y="36">
+  <block type="sensor_button" id="1" x="-392" y="36">
     <field name="OBJECT">UP</field>
   </block>
-  <block type="procedures_defreturn" id="56" inline="false" x="239" y="54">
+  <block type="procedures_defreturn" id="2" inline="false" x="239" y="54">
     <mutation></mutation>
     <field name="NAME">functionName</field>
     <statement name="STACK">
-      <block type="movement_right" id="26">
+      <block type="movement_right" id="3">
         <next>
-          <block type="comment_comment" id="6">
+          <block type="comment_comment" id="4">
             <field name="TEXT"></field>
             <next>
-              <block type="comment_comment" id="4">
+              <block type="comment_comment" id="5">
                 <field name="TEXT"></field>
                 <next>
-                  <block type="movement_forward" id="16">
+                  <block type="movement_forward" id="6">
                     <next>
-                      <block type="multimedia_playwav" id="42">
+                      <block type="multimedia_playwav" id="7">
                         <field name="WAV"></field>
                         <next>
-                          <block type="movement_reverse" id="52">
+                          <block type="movement_reverse" id="8">
                             <next>
-                              <block type="variables_set" id="85" inline="true">
+                              <block type="variables_set" id="9" inline="true">
                                 <field name="VAR">item</field>
                                 <value name="VALUE">
-                                  <block type="sensor_object" id="68">
+                                  <block type="sensor_object" id="10">
                                     <field name="OBJECT">LEFTFRONT</field>
                                   </block>
                                 </value>
@@ -43,7 +43,7 @@
       </block>
     </statement>
     <value name="RETURN">
-      <block type="math_bitwise" id="93" inline="true">
+      <block type="math_bitwise" id="11" inline="true">
         <field name="OP">AND</field>
       </block>
     </value>
