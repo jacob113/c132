@@ -2,9 +2,9 @@
   <block type="sensor_button" id="1" x="-392" y="36">
     <field name="OBJECT">UP</field>
   </block>
-  <block type="procedures_defreturn" id="2" inline="false" x="239" y="54">
+  <block type="procedures_defreturn" id="2" inline="false" x="276" y="80">
     <mutation></mutation>
-    <field name="NAME">functionName</field>
+    <field name="NAME">ps4</field>
     <statement name="STACK">
       <block type="movement_right" id="3">
         <next>
@@ -14,20 +14,31 @@
               <block type="comment_comment" id="5">
                 <field name="TEXT"></field>
                 <next>
-                  <block type="movement_forward" id="6">
+                  <block type="expansion_elevation" id="52" inline="true">
+                    <value name="NUMBER">
+                      <block type="multimedia_pollwav" id="90"></block>
+                    </value>
                     <next>
-                      <block type="multimedia_playwav" id="7">
-                        <field name="WAV"></field>
+                      <block type="movement_forward" id="6">
                         <next>
-                          <block type="movement_reverse" id="8">
+                          <block type="movement_stop" id="83">
                             <next>
-                              <block type="variables_set" id="9" inline="true">
-                                <field name="VAR">item</field>
-                                <value name="VALUE">
-                                  <block type="sensor_object" id="10">
-                                    <field name="OBJECT">LEFTFRONT</field>
+                              <block type="multimedia_playwav" id="7">
+                                <field name="WAV"></field>
+                                <next>
+                                  <block type="movement_reverse" id="8">
+                                    <next>
+                                      <block type="variables_set" id="9" inline="true">
+                                        <field name="VAR">item</field>
+                                        <value name="VALUE">
+                                          <block type="sensor_object" id="10">
+                                            <field name="OBJECT">LEFTFRONT</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
                                   </block>
-                                </value>
+                                </next>
                               </block>
                             </next>
                           </block>
@@ -47,5 +58,8 @@
         <field name="OP">AND</field>
       </block>
     </value>
+  </block>
+  <block type="variables_set" id="61" inline="true" x="-175" y="145">
+    <field name="VAR">item</field>
   </block>
 </xml>
