@@ -2,7 +2,7 @@
   <block type="sensor_button" id="1" x="-392" y="36">
     <field name="OBJECT">UP</field>
   </block>
-  <block type="procedures_defreturn" id="2" inline="false" x="276" y="80">
+  <block type="procedures_defreturn" id="2" inline="false" x="281" y="109">
     <mutation></mutation>
     <field name="NAME">ps4</field>
     <statement name="STACK">
@@ -12,28 +12,33 @@
             <field name="TEXT">123</field>
             <next>
               <block type="comment_comment" id="5">
-                <field name="TEXT">fuck</field>
+                <field name="TEXT">1009</field>
                 <next>
-                  <block type="controls_whileUntil" id="101" inline="false">
+                  <block type="controls_whileUntil" id="6" inline="false">
                     <field name="MODE">WHILE</field>
                     <value name="NUMBER">
-                      <block type="multimedia_pollwav" id="141"></block>
+                      <block type="multimedia_pollwav" id="7"></block>
                     </value>
                     <statement name="DO">
-                      <block type="controls_if" id="115" inline="false">
+                      <block type="controls_if" id="8" inline="false">
                         <value name="IF0">
-                          <block type="math_number" id="122">
-                            <field name="NUM">100</field>
+                          <block type="math_number" id="9">
+                            <field name="NUM">123</field>
                           </block>
                         </value>
                         <statement name="DO0">
-                          <block type="multimedia_displaybmp" id="134">
+                          <block type="multimedia_displaybmp" id="10">
                             <field name="BMP">786</field>
                             <next>
-                              <block type="robot_delay" id="127" inline="true">
+                              <block type="robot_delay" id="11" inline="true">
                                 <value name="DELAY">
-                                  <block type="math_arithmetic" id="164" inline="true">
+                                  <block type="math_arithmetic" id="12" inline="true">
                                     <field name="OP">ADD</field>
+                                    <value name="A">
+                                      <block type="procedures_callreturn" id="43">
+                                        <mutation name="ps4"></mutation>
+                                      </block>
+                                    </value>
                                   </block>
                                 </value>
                               </block>
@@ -43,42 +48,42 @@
                       </block>
                     </statement>
                     <next>
-                      <block type="expansion_elevation" id="52" inline="true">
+                      <block type="expansion_elevation" id="13" inline="true">
                         <value name="NUMBER">
-                          <block type="multimedia_pollwav" id="90"></block>
+                          <block type="multimedia_pollwav" id="14"></block>
                         </value>
                         <next>
-                          <block type="movement_forward" id="6">
+                          <block type="movement_forward" id="15">
                             <next>
-                              <block type="movement_stop" id="83">
+                              <block type="movement_stop" id="16">
                                 <next>
-                                  <block type="multimedia_playwav" id="7">
-                                    <field name="WAV"></field>
+                                  <block type="multimedia_playwav" id="17">
+                                    <field name="WAV">10000000000000000000</field>
                                     <next>
-                                      <block type="movement_reverse" id="8">
+                                      <block type="movement_reverse" id="18">
                                         <next>
-                                          <block type="procedures_ifreturn" id="169" inline="true">
+                                          <block type="procedures_ifreturn" id="19" inline="true">
                                             <mutation value="1"></mutation>
                                             <value name="CONDITION">
-                                              <block type="logic_compare" id="176" inline="true">
+                                              <block type="logic_compare" id="20" inline="true">
                                                 <field name="OP">EQ</field>
                                                 <value name="A">
-                                                  <block type="sensor_light" id="199">
+                                                  <block type="sensor_light" id="21">
                                                     <field name="LIGHT">LEFT</field>
                                                   </block>
                                                 </value>
                                               </block>
                                             </value>
                                             <value name="VALUE">
-                                              <block type="logic_compare" id="190" inline="true">
+                                              <block type="logic_compare" id="22" inline="true">
                                                 <field name="OP">EQ</field>
                                               </block>
                                             </value>
                                             <next>
-                                              <block type="variables_set" id="9" inline="true">
+                                              <block type="variables_set" id="23" inline="true">
                                                 <field name="VAR">item</field>
                                                 <value name="VALUE">
-                                                  <block type="math_random" id="108"></block>
+                                                  <block type="math_random" id="24"></block>
                                                 </value>
                                               </block>
                                             </next>
@@ -103,12 +108,9 @@
       </block>
     </statement>
     <value name="RETURN">
-      <block type="math_bitwise" id="11" inline="true">
+      <block type="math_bitwise" id="25" inline="true">
         <field name="OP">AND</field>
       </block>
     </value>
-  </block>
-  <block type="variables_set" id="61" inline="true" x="-175" y="145">
-    <field name="VAR">item</field>
   </block>
 </xml>
